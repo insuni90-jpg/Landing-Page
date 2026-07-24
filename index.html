@@ -289,42 +289,64 @@
     </div>
   </section>
 
-  <!-- S6 채점 리포트 -->
-  
-
-  <!-- S6b 영역별 점수 (레퍼런스형 · 비교용) -->
-  <section data-screen-label="S6b 영역별 점수(레퍼런스형)" style="background:#F4F6F8; border-top:1px solid #E5E7EB;">
-    <div data-reveal="" style="max-width:1200px; margin:0 auto; padding:120px 24px;">
-      <div style="text-align:center; margin-bottom:56px;">
-        <span style="display:inline-block; background:#E8F5EC; color:#00661A; font-size:14px; font-weight:600; padding:7px 14px; border-radius:999px; margin-bottom:20px;">영역별 리포트</span>
-        <h2 style="font-size:32px; font-weight:700; letter-spacing:-1px; margin:0 0 16px;">지금 어디가 부족한지,<br><span style="color:#00661A;">영역별로 정확히</span> 짚어드립니다</h2>
-        <p style="font-size:16px; line-height:1.6; color:#4B5563; margin:0;">내용 · 구성 · 표현을 나눠서 채점하고, 목표까지 얼마나 남았는지 한눈에 보여줍니다.</p>
+  <!-- S6 성과 대시보드 (통합 · 브라우저 목업) -->
+  <section data-screen-label="S6 성과 대시보드" style="background:#EBEEF2;">
+    <div data-reveal="" style="max-width:1200px; margin:0 auto; padding:110px 24px;">
+      <div style="text-align:center; margin-bottom:44px;">
+        <span style="display:inline-block; background:#E8F5EC; color:#00661A; font-size:14px; font-weight:600; padding:7px 14px; border-radius:999px; margin-bottom:20px;">성과 분석 · 추이</span>
+        <h2 style="font-size:32px; font-weight:700; letter-spacing:-1px; margin:0 0 16px; color:#111827;">어디가 부족한지, 얼마나 나아졌는지</h2>
+        <p style="font-size:16px; line-height:1.6; color:#4B5563; margin:0;">종합 분석과 문장 첨삭으로 현재를 진단하고, 성적 추이로 목표 달성까지 추적하세요.</p>
       </div>
 
-      <div style="display:grid; grid-template-columns:340px 1fr; gap:20px; align-items:stretch;">
-        <!-- 종합 점수 카드 -->
-        <div style="background:#FFFFFF; border:1px solid #EEF1F4; border-radius:16px; padding:26px 28px; display:flex; flex-direction:column;">
-          <div style="font-size:16px; font-weight:700; color:#191F28; margin-bottom:20px;">종합 점수</div>
-          <div style="display:flex; flex-direction:column; align-items:center; gap:12px; flex:1; justify-content:center;">
-            <div style="position:relative; width:176px; height:176px;">
-              <svg width="176" height="176" viewBox="0 0 176 176">
-                <circle cx="88" cy="88" r="72" fill="none" stroke="#EEF1F4" stroke-width="14"></circle>
-                <circle cx="88" cy="88" r="72" fill="none" stroke="#00661A" stroke-width="14" stroke-linecap="round" stroke-dasharray="452" stroke-dashoffset="117" transform="rotate(-90 88 88)"></circle>
-                <g transform="rotate(306 88 88)"><line x1="88" y1="6" x2="88" y2="26" stroke="#1B2432" stroke-width="3" stroke-linecap="round"></line></g>
-              </svg>
-              <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-                <div style="font-size:46px; font-weight:800; color:#191F28; line-height:1;">74<span style="font-size:19px; font-weight:600; color:#8B95A1;">점</span></div>
-                <div style="font-size:13px; color:#8B95A1; margin-top:5px;">종합</div>
-              </div>
-            </div>
-            <div style="font-size:13px; font-weight:700; color:#00661A;">목표 85점까지 11점 남았어요</div>
+      <!-- 브라우저 목업 -->
+      <div style="background:#FFFFFF; border:1px solid #D8DEE6; border-radius:16px; box-shadow:0 26px 60px rgba(27,36,50,.16); overflow:hidden;">
+        <!-- 크롬 바 -->
+        <div style="display:flex; align-items:center; gap:14px; height:46px; padding:0 18px; background:#F1F3F6; border-bottom:1px solid #E2E7EE;">
+          <div style="display:flex; gap:7px; flex:none;">
+            <span style="width:12px; height:12px; border-radius:50%; background:#E2554F;"></span>
+            <span style="width:12px; height:12px; border-radius:50%; background:#E8B23A;"></span>
+            <span style="width:12px; height:12px; border-radius:50%; background:#4FB158;"></span>
           </div>
-          <div style="background:#F4F9F5; border:1px solid #DCEEE2; border-radius:12px; padding:14px 16px; font-size:13px; line-height:1.65; color:#333D4B; margin-top:20px;"><span style="font-weight:700; color:#00661A;">종합 피드백 · </span>표현 영역의 문장 호응과 어휘 정확성을 다듬으면 종합 점수가 크게 오를 여지가 있습니다.</div>
+          <div style="flex:1; max-width:420px; margin:0 auto; display:flex; align-items:center; gap:8px; height:26px; padding:0 14px; background:#FFFFFF; border:1px solid #E2E7EE; border-radius:999px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00661A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>
+            <span style="font-size:12px; color:#6B7280;">nonsup.co.kr / growth_report</span>
+          </div>
+          <div style="flex:none; width:52px;"></div>
         </div>
 
-        <!-- 영역별 점수 카드 -->
-        <div style="background:#FFFFFF; border:1px solid #EEF1F4; border-radius:16px; padding:26px 28px;">
-          <div style="font-size:16px; font-weight:700; color:#191F28; margin-bottom:20px;">영역별 점수</div>
+        <!-- 대시보드 본문 -->
+        <div style="padding:28px; background:#F6F8FA; display:flex; flex-direction:column; gap:18px;">
+          <!-- 상단 3블록 -->
+          <div style="position:relative;">
+            <div class="ns-bubble" style="position: absolute; max-width: 480px; color: #FFFFFF; border-radius: 16px; padding: 15px 19px; box-shadow: 0 14px 34px rgba(30,42,90,.28); font-size: 13.5px; line-height: 1.6; z-index: 6; background-color: #1B2432; width: 420px; height: 50px; text-align: center; left: 468px; top: 30px">
+              
+              <span>종합 점수부터 영역별 분석, 실시간 문장 첨삭까지 한눈에 확인하세요.</span>
+              <div style="position: absolute; bottom: -6px; right: 74px; width: 13px; height: 13px; transform: rotate(45deg); background-color: #1B2432"></div>
+            </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-end; flex-direction: row">
+            <!-- 종합 점수 카드 -->
+            <div style="flex:0 0 296px; background:#FFFFFF; border:1px solid #EEF1F4; border-radius:16px; padding:24px 26px; display:flex; flex-direction:column;">
+              <div style="font-size:15px; font-weight:700; color:#191F28; margin-bottom:16px;">종합 점수</div>
+              <div style="display:flex; flex-direction:column; align-items:center; gap:12px; flex:1; justify-content:center;">
+                <div style="position:relative; width:168px; height:168px;">
+                  <svg width="168" height="168" viewBox="0 0 176 176">
+                    <circle cx="88" cy="88" r="72" fill="none" stroke="#EEF1F4" stroke-width="14"></circle>
+                    <circle cx="88" cy="88" r="72" fill="none" stroke="#00661A" stroke-width="14" stroke-linecap="round" stroke-dasharray="452" stroke-dashoffset="117" transform="rotate(-90 88 88)" id="ns-dash-ring"></circle>
+                    <g transform="rotate(306 88 88)"><line x1="88" y1="6" x2="88" y2="26" stroke="#1B2432" stroke-width="3" stroke-linecap="round"></line></g>
+                  </svg>
+                  <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                    <div style="font-size:52px; font-weight:800; color:#191F28; line-height:1;"><span data-count="74">74</span><span style="font-size:20px; font-weight:600; color:#8B95A1;">점</span></div>
+                    <div style="font-size:13px; color:#8B95A1; margin-top:5px;">종합</div>
+                  </div>
+                </div>
+                <div style="font-size:13px; font-weight:700; color:#00661A;">목표 85점까지 11점 남았어요</div>
+              </div>
+              <div style="background:#F4F9F5; border:1px solid #DCEEE2; border-radius:12px; padding:13px 15px; font-size:12.5px; line-height:1.6; color:#333D4B; margin-top:18px;"><span style="font-weight:700; color:#00661A;">종합 피드백 · </span>표현 영역의 문장 호응과 어휘 정확성을 다듬으면 종합 점수가 크게 오를 여지가 있습니다.</div>
+            </div>
+
+            <!-- 영역별 점수 카드 -->
+            <div style="flex: 1 1 330px; background: #FFFFFF; border: 1px solid #EEF1F4; border-radius: 16px; padding: 24px 26px; margin-top: 100px; position: static">
+              <div style="font-size:15px; font-weight:700; color:#191F28; margin-bottom:18px;">영역별 점수</div>
           <div style="display:flex; flex-direction:column; gap:18px;">
             <!-- 내용 -->
             <div style="display:flex; flex-direction:column; gap:7px;">
@@ -332,12 +354,12 @@
                 <div style="display:flex; align-items:baseline; gap:8px;">
                   <span style="align-self:center; width:8px; height:8px; border-radius:50%; background:#3182F6;"></span>
                   <span style="font-size:14px; font-weight:700; color:#333D4B;">내용</span>
-                  <span style="font-size:15px; font-weight:800; color:#3182F6;">82</span>
+                  <span style="font-size:15px; font-weight:800; color:#3182F6;" data-count="82">82</span>
                 </div>
                 <span style="font-size:11.5px; color:#8B95A1;">목표 90</span>
               </div>
               <div style="position:relative; height:10px; background:#EEF1F4; border-radius:5px;">
-                <div style="width:82%; height:100%; background:#3182F6; border-radius:5px;"></div>
+                <div class="ns-dash-bar" data-w="82" style="width:82%; height:100%; background:#3182F6; border-radius:5px;"></div>
                 <div style="position:absolute; left:90%; top:-4px; bottom:-4px; border-left:2px dashed #1B2432;"></div>
               </div>
               <div style="font-size:12.5px; line-height:1.6; color:#6B7684;">논지가 분명하고 근거 제시가 안정적입니다.</div>
@@ -348,12 +370,12 @@
                 <div style="display:flex; align-items:baseline; gap:8px;">
                   <span style="align-self:center; width:8px; height:8px; border-radius:50%; background:#F59F00;"></span>
                   <span style="font-size:14px; font-weight:700; color:#333D4B;">구성</span>
-                  <span style="font-size:15px; font-weight:800; color:#F59F00;">71</span>
+                  <span style="font-size:15px; font-weight:800; color:#F59F00;" data-count="71">71</span>
                 </div>
                 <span style="font-size:11.5px; color:#8B95A1;">목표 80</span>
               </div>
               <div style="position:relative; height:10px; background:#EEF1F4; border-radius:5px;">
-                <div style="width:71%; height:100%; background:#F59F00; border-radius:5px;"></div>
+                <div class="ns-dash-bar" data-w="71" style="width:71%; height:100%; background:#F59F00; border-radius:5px;"></div>
                 <div style="position:absolute; left:80%; top:-4px; bottom:-4px; border-left:2px dashed #1B2432;"></div>
               </div>
               <div style="font-size:12.5px; line-height:1.6; color:#6B7684;">문단 간 연결을 매끄럽게 다듬으면 흐름이 좋아집니다.</div>
@@ -364,98 +386,135 @@
                 <div style="display:flex; align-items:baseline; gap:8px;">
                   <span style="align-self:center; width:8px; height:8px; border-radius:50%; background:#9775FA;"></span>
                   <span style="font-size:14px; font-weight:700; color:#333D4B;">표현</span>
-                  <span style="font-size:15px; font-weight:800; color:#9775FA;">68</span>
+                  <span style="font-size:15px; font-weight:800; color:#9775FA;" data-count="68">68</span>
                   <span style="align-self:center; font-size:10.5px; font-weight:700; color:#B54708; background:#FEF3E2; border:1px solid #F5D9A8; padding:2px 8px; border-radius:999px; white-space:nowrap;">집중 보완</span>
                 </div>
                 <span style="font-size:11.5px; color:#8B95A1;">목표 80</span>
               </div>
               <div style="position:relative; height:10px; background:#EEF1F4; border-radius:5px;">
-                <div style="width:68%; height:100%; background:#9775FA; border-radius:5px;"></div>
+                <div class="ns-dash-bar" data-w="68" style="width:68%; height:100%; background:#9775FA; border-radius:5px;"></div>
                 <div style="position:absolute; left:80%; top:-4px; bottom:-4px; border-left:2px dashed #1B2432;"></div>
               </div>
               <div style="font-size:12.5px; line-height:1.6; color:#6B7684;">문장 호응과 어휘 정확성을 보완하면 점수가 오릅니다.</div>
             </div>
           </div>
-        </div>
-      </div>
+            </div>
 
-      <!-- 첨삭 예시 -->
-      <div style="background:#FFFFFF; border:1px solid #EEF1F4; border-radius:16px; padding:26px 28px; margin-top:20px;">
-        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:18px;">
-          <div style="font-size:16px; font-weight:700; color:#191F28;">문장 첨삭</div>
-          <span style="font-size:11.5px; color:#8B95A1;">AI가 고쳐 쓴 부분만 모아 보기</span>
-        </div>
-        <div style="display:flex; flex-direction:column; gap:12px;">
-          <div style="display:flex; align-items:flex-start; gap:14px; background:#F8FAFB; border:1px solid #EEF1F4; border-radius:12px; padding:14px 16px;">
-            <span style="flex:none; margin-top:2px; font-size:10.5px; font-weight:700; color:#6B4FD8; background:#F1ECFD; padding:3px 9px; border-radius:999px; white-space:nowrap;">표현</span>
-            <div style="flex:1; min-width:0;">
-              <div style="display:flex; align-items:center; flex-wrap:wrap; gap:8px; font-size:14px; line-height:1.5;">
-                <span style="color:#D24B5A; text-decoration:line-through; text-decoration-color:#F0A6AE;">학생 들에게</span>
-                <span style="color:#B0B8C1;">→</span>
-                <span style="color:#00661A; font-weight:700;">학생들에게</span>
+            <!-- 문장 첨삭 카드 -->
+            <div style="flex:1.2 1 350px; background:#FFFFFF; border:1px solid #EEF1F4; border-radius:16px; padding:24px 26px; margin-top:100px;">
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:18px;">
+                <div style="font-size:15px; font-weight:700; color:#191F28;">문장 첨삭</div>
+                <span style="font-size:11.5px; color:#8B95A1;">고쳐 쓴 부분만</span>
               </div>
-              <div style="font-size:12.5px; color:#8B95A1; margin-top:6px;">‘들’은 앞말에 붙여 쓰는 접미사예요.</div>
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <div class="ns-fix-row" style="display:flex; align-items:flex-start; gap:12px; background:#F8FAFB; border:1px solid #EEF1F4; border-radius:12px; padding:12px 14px;">
+                  <span style="flex:none; margin-top:2px; font-size:10px; font-weight:700; color:#6B4FD8; background:#F1ECFD; padding:3px 8px; border-radius:999px; white-space:nowrap;">표현</span>
+                  <div style="flex:1; min-width:0;">
+                    <div style="display:flex; align-items:center; flex-wrap:wrap; gap:7px; font-size:13.5px; line-height:1.5;">
+                      <span style="color:#D24B5A; text-decoration:line-through; text-decoration-color:#F0A6AE;">학생 들에게</span>
+                      <span style="color:#B0B8C1;">→</span>
+                      <span style="color:#00661A; font-weight:700;">학생들에게</span>
+                    </div>
+                    <div style="font-size:12px; color:#8B95A1; margin-top:5px;">‘들’은 앞말에 붙여 쓰는 접미사예요.</div>
+                  </div>
+                </div>
+                <div class="ns-fix-row" style="display:flex; align-items:flex-start; gap:12px; background:#F8FAFB; border:1px solid #EEF1F4; border-radius:12px; padding:12px 14px;">
+                  <span style="flex:none; margin-top:2px; font-size:10px; font-weight:700; color:#6B4FD8; background:#F1ECFD; padding:3px 8px; border-radius:999px; white-space:nowrap;">표현</span>
+                  <div style="flex:1; min-width:0;">
+                    <div style="display:flex; align-items:center; flex-wrap:wrap; gap:7px; font-size:13.5px; line-height:1.5;">
+                      <span style="color:#D24B5A; text-decoration:line-through; text-decoration-color:#F0A6AE;">영향을 주는 것 같다</span>
+                      <span style="color:#B0B8C1;">→</span>
+                      <span style="color:#00661A; font-weight:700;">영향을 준다</span>
+                    </div>
+                    <div style="font-size:12px; color:#8B95A1; margin-top:5px;">모호한 추측 표현을 단정적인 문장으로 정리했어요.</div>
+                  </div>
+                </div>
+                <div class="ns-fix-row" style="display:flex; align-items:flex-start; gap:12px; background:#F8FAFB; border:1px solid #EEF1F4; border-radius:12px; padding:12px 14px;">
+                  <span style="flex:none; margin-top:2px; font-size:10px; font-weight:700; color:#B26A00; background:#FDF1DC; padding:3px 8px; border-radius:999px; white-space:nowrap;">구성</span>
+                  <div style="flex:1; min-width:0;">
+                    <div style="display:flex; align-items:center; flex-wrap:wrap; gap:7px; font-size:13.5px; line-height:1.5;">
+                      <span style="color:#D24B5A; text-decoration:line-through; text-decoration-color:#F0A6AE;">그리고 또한 게다가</span>
+                      <span style="color:#B0B8C1;">→</span>
+                      <span style="color:#00661A; font-weight:700;">또한</span>
+                    </div>
+                    <div style="font-size:12px; color:#8B95A1; margin-top:5px;">접속어가 중복돼 하나로 줄였어요.</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div style="display:flex; align-items:flex-start; gap:14px; background:#F8FAFB; border:1px solid #EEF1F4; border-radius:12px; padding:14px 16px;">
-            <span style="flex:none; margin-top:2px; font-size:10.5px; font-weight:700; color:#6B4FD8; background:#F1ECFD; padding:3px 9px; border-radius:999px; white-space:nowrap;">표현</span>
-            <div style="flex:1; min-width:0;">
-              <div style="display:flex; align-items:center; flex-wrap:wrap; gap:8px; font-size:14px; line-height:1.5;">
-                <span style="color:#D24B5A; text-decoration:line-through; text-decoration-color:#F0A6AE;">영향을 주는 것 같다</span>
-                <span style="color:#B0B8C1;">→</span>
-                <span style="color:#00661A; font-weight:700;">영향을 준다</span>
-              </div>
-              <div style="font-size:12.5px; color:#8B95A1; margin-top:6px;">모호한 추측 표현을 단정적인 문장으로 정리했어요.</div>
-            </div>
-          </div>
-          <div style="display:flex; align-items:flex-start; gap:14px; background:#F8FAFB; border:1px solid #EEF1F4; border-radius:12px; padding:14px 16px;">
-            <span style="flex:none; margin-top:2px; font-size:10.5px; font-weight:700; color:#B26A00; background:#FDF1DC; padding:3px 9px; border-radius:999px; white-space:nowrap;">구성</span>
-            <div style="flex:1; min-width:0;">
-              <div style="display:flex; align-items:center; flex-wrap:wrap; gap:8px; font-size:14px; line-height:1.5;">
-                <span style="color:#D24B5A; text-decoration:line-through; text-decoration-color:#F0A6AE;">그리고 또한 게다가</span>
-                <span style="color:#B0B8C1;">→</span>
-                <span style="color:#00661A; font-weight:700;">또한</span>
-              </div>
-              <div style="font-size:12.5px; color:#8B95A1; margin-top:6px;">접속어가 중복돼 하나로 줄였어요.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- S7 성장 리포트 -->
-  <section data-screen-label="S7 성장 리포트" id="s7" style="background:#FFFFFF;">
-    <div data-reveal="" style="max-width:1200px; margin:0 auto; padding:120px 24px;">
-      <div style="display:grid; grid-template-columns:5fr 7fr; gap:64px; align-items:center; margin-bottom:48px;">
-        <div>
-          <h2 style="font-size:32px; font-weight:700; letter-spacing:-1px; margin:0 0 16px;">한 번의 점수가 아니라,<br><span style="color:#00661A;">점수의 흐름</span>을 봅니다</h2>
-          <p style="font-size:16px; line-height:1.7; color:#4B5563; margin:0;">응시할수록 기록이 쌓입니다. 최근 10회차 추이와 영역별 변화를 한 화면에서 확인하고, 직접 목표 점수를 세워보세요.</p>
-        </div>
-        <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:16px; padding:32px;">
-          <svg viewBox="0 0 520 220" style="width:100%; height:auto;">
-            <line x1="40" y1="30" x2="40" y2="185" stroke="#E5E7EB" stroke-width="1"></line>
-            <line x1="40" y1="185" x2="505" y2="185" stroke="#E5E7EB" stroke-width="1"></line>
-            <polyline id="ns-line-avg" points="55,150 100,148 145,146 190,143 235,142 280,140 325,138 370,137 415,135 470,133" fill="none" stroke="#9CA3AF" stroke-width="2.5" stroke-dasharray="6 6"></polyline>
-            <polyline id="ns-line-me" points="55,160 100,152 145,155 190,140 235,132 280,128 325,118 370,112 415,100 470,88" fill="none" stroke="#00661A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
-            <circle cx="470" cy="88" r="5" fill="#00661A"></circle>
-          </svg>
-          <div style="display:flex; gap:24px; margin-top:12px; padding-left:16px; font-size:12px; color:#6B7280;">
-            <span style="display:flex; align-items:center; gap:6px;"><span style="width:16px; height:3px; background:#00661A; border-radius:2px;"></span>내 점수</span>
-            <span style="display:flex; align-items:center; gap:6px;"><span style="width:16px; height:0; border-top:2px dashed #9CA3AF;"></span>전국 평균</span>
+          </div>
+
+          <!-- 하단: 최근 점수 기록 그래프 -->
+          <div style="margin-top:0;">
+            <div style="background:#FFFFFF; border:1px solid #EEF1F4; border-radius:16px; padding:26px 28px;">
+              
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; flex-wrap:wrap; gap:12px;">
+                <div style="font-size:16px; font-weight:800; color:#191F28;">최근 점수 기록</div>
+                <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                  <span style="display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; color:#FFFFFF; background:#00661A; padding:6px 14px; border-radius:999px;">종합</span>
+                  <span style="display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; color:#4B5563; background:#FFFFFF; border:1px solid #E5E7EB; padding:6px 13px; border-radius:999px;"><span style="width:7px; height:7px; border-radius:50%; background:#3182F6;"></span>내용</span>
+                  <span style="display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; color:#4B5563; background:#FFFFFF; border:1px solid #E5E7EB; padding:6px 13px; border-radius:999px;"><span style="width:7px; height:7px; border-radius:50%; background:#F59F00;"></span>구성</span>
+                  <span style="display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; color:#FFFFFF; background:#9775FA; padding:6px 14px; border-radius:999px;">표현</span>
+                </div>
+              </div><div style="position:relative;">
+                <div class="ns-bubble" style="position: absolute; top: -30px; left: 222px; max-width: 392px; text-align: center; color: #FFFFFF; border-radius: 16px; padding: 13px 22px; box-shadow: 0 14px 34px rgba(30,42,90,.28); font-size: 14px; line-height: 1.55; z-index: 5; background-color: #1B2432; width: 400px">
+                  <span>데이터를 통해 꾸준히 상승하는 나의 논술 실력을 확인하세요.</span>
+                  <div style="position: absolute; bottom: -6px; left: 50%; margin-left: -6px; width: 13px; height: 13px; transform: rotate(45deg); background-color: #1B2432"></div>
+                </div>
+                <svg viewBox="0 0 1180 340" style="width:100%; height:auto; display:block; overflow:visible;">
+                  <g stroke="#EEF1F4" stroke-width="1">
+                    <line x1="60" y1="40" x2="1160" y2="40"></line>
+                    <line x1="60" y1="92" x2="1160" y2="92"></line>
+                    <line x1="60" y1="144" x2="1160" y2="144"></line>
+                    <line x1="60" y1="196" x2="1160" y2="196"></line>
+                    <line x1="60" y1="248" x2="1160" y2="248"></line>
+                    <line x1="60" y1="300" x2="1160" y2="300"></line>
+                  </g><circle cx="664" cy="160" r="5" fill="#FFFFFF" stroke="#00661A" stroke-width="3"></circle>
+                  <g fill="#9CA3AF" font-size="13" text-anchor="end">
+                    <text x="46" y="45">100</text>
+                    <text x="46" y="97">90</text>
+                    <text x="46" y="149">80</text>
+                    <text x="46" y="201">70</text>
+                    <text x="46" y="253">60</text>
+                    <text x="46" y="305">50</text>
+                  </g>
+                  <line x1="664" y1="40" x2="664" y2="300" stroke="#C7CDD4" stroke-width="1.5" stroke-dasharray="5 5"></line>
+                  <polyline id="ns-g-pyo" points="70,227 189,206 308,196 427,201 546,186 664,165 783,144 902,123 1021,113 1140,40" fill="none" stroke="#9775FA" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+                  <polyline id="ns-g-jong" points="70,222 189,206 308,196 427,201 546,180 664,160 783,134 902,118 1021,102 1140,118" fill="none" stroke="#00661A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+                  <circle cx="1140" cy="118" r="5.5" fill="#00661A"></circle>
+                  
+                  
+                  <circle cx="664" cy="160" r="5" fill="#FFFFFF" stroke="#00661A" stroke-width="3"></circle>
+                  <g fill="#9CA3AF" font-size="12.5" text-anchor="middle">
+                    <text x="70" y="326">26.06.22</text>
+                    <text x="189" y="326">26.06.23</text>
+                    <text x="308" y="326">26.06.24</text>
+                    <text x="427" y="326">26.06.25</text>
+                    <text x="546" y="326">26.06.26</text>
+                    <text x="664" y="326" fill="#4B5563" font-weight="700">26.06.27</text>
+                    <text x="783" y="326">26.06.28</text>
+                    <text x="902" y="326">26.06.29</text>
+                    <text x="1021" y="326">26.06.30</text>
+                    <text x="1140" y="326">26.07.01</text>
+                  </g>
+                </svg>
+                <div style="position:absolute; left:57.5%; top:16%; background:#FFFFFF; border:1px solid #EEF1F4; border-radius:12px; box-shadow:0 14px 32px rgba(27,36,50,.16); padding:14px 16px; min-width:236px; z-index:4;">
+                  <div style="font-size:13px; font-weight:700; color:#191F28; margin-bottom:11px;">성균관대학교 모의논술 7월 회차</div>
+                  <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:22px;"><span style="display:flex; align-items:center; gap:7px; color:#4B5563;"><span style="width:8px; height:8px; border-radius:50%; background:#00661A;"></span>종합</span><span style="font-weight:700; color:#191F28;">77점 <span style="color:#00661A;">(+4)</span></span></div>
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:22px;"><span style="display:flex; align-items:center; gap:7px; color:#4B5563;"><span style="width:8px; height:8px; border-radius:50%; background:#3182F6;"></span>내용</span><span style="font-weight:700; color:#191F28;">74점 <span style="color:#3182F6;">(+4)</span></span></div>
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:22px;"><span style="display:flex; align-items:center; gap:7px; color:#4B5563;"><span style="width:8px; height:8px; border-radius:50%; background:#F59F00;"></span>구성</span><span style="font-weight:700; color:#191F28;">80점 <span style="color:#F59F00;">(+5)</span></span></div>
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:22px;"><span style="display:flex; align-items:center; gap:7px; color:#4B5563;"><span style="width:8px; height:8px; border-radius:50%; background:#9775FA;"></span>표현</span><span style="font-weight:700; color:#191F28;">76점 <span style="color:#9775FA;">(+4)</span></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:48px;">
-        <div style="text-align:center; background:#F9FAFB; border-radius:16px; padding:28px;"><div style="font-size:14px; color:#6B7280; margin-bottom:8px;">최초 점수</div><div style="font-size:32px; font-weight:700; color:#9CA3AF;">58</div></div>
-        <div style="text-align:center; background:#F9FAFB; border-radius:16px; padding:28px;"><div style="font-size:14px; color:#6B7280; margin-bottom:8px;">현재 점수</div><div style="font-size:32px; font-weight:700; color:#111827;">74</div></div>
-        <div style="text-align:center; background:#CBF6C3; border-radius:16px; padding:28px;"><div style="font-size:14px; color:#00581E; margin-bottom:8px;">총 향상 점수</div><div style="font-size:32px; font-weight:700; color:#00661A;">+16</div></div>
-      </div>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
-        <div style="border:1px solid #E5E7EB; border-radius:16px; padding:24px;"><h4 style="font-size:18px; font-weight:600; margin:0 0 8px;">성장 추이</h4><p style="font-size:14px; color:#4B5563; margin:0; line-height:1.6;">최근 10회차 점수 변화를 그래프로.</p></div>
-        <div style="border:1px solid #E5E7EB; border-radius:16px; padding:24px;"><h4 style="font-size:18px; font-weight:600; margin:0 0 8px;">영역별 분석</h4><p style="font-size:14px; color:#4B5563; margin:0; line-height:1.6;">내용·구성·표현 중 어디가 약한지.</p></div>
-        <div style="border:1px solid #E5E7EB; border-radius:16px; padding:24px;"><h4 style="font-size:18px; font-weight:600; margin:0 0 8px;">목표 설정</h4><p style="font-size:14px; color:#4B5563; margin:0; line-height:1.6;">영역별 목표를 세우고 달성률 추적.</p></div>
-      </div>
+      <p style="text-align:center; font-size:11px; line-height:1.5; color:#9CA3AF; margin:26px 0 0;">AI 채점 결과는 학습 참고용 자료이며, 실제 대학의 평가 결과와 다를 수 있습니다.</p>
     </div>
   </section>
 
@@ -656,13 +715,17 @@ class Component extends DCLogic {
         const ar = speedInit.querySelector(".ns-speed-arrow"); if (ar) ar.style.opacity = "0";
       } else { speedInit._done = true; }
     }
-    root.querySelectorAll("[data-screen-label='S6 영역별 채점']").forEach(sec => {
+    root.querySelectorAll("[data-screen-label='S6 성과 대시보드']").forEach(sec => {
       if (sec._si) return;
       sec._si = true;
       if (belowFold(sec)) {
-        sec.querySelectorAll(".ns-bar").forEach(b => { b.style.width = "0"; });
-        const ring = sec.querySelector("#ns-ring"); if (ring) ring.style.strokeDashoffset = "390";
-      } else { sec._bars = true; }
+        const ring = sec.querySelector("#ns-dash-ring"); if (ring) ring.style.strokeDashoffset = "452";
+        sec.querySelectorAll(".ns-dash-bar").forEach(b => { b.style.width = "0"; });
+        sec.querySelectorAll(".ns-fix-row").forEach(r => { r.style.opacity = "0"; r.style.transform = "translateY(10px)"; r.style.transition = "opacity .5s ease-out, transform .5s ease-out"; });
+        sec.querySelectorAll(".ns-bubble").forEach(b => { b.style.opacity = "0"; b.style.transform = "translateY(8px)"; b.style.transition = "opacity .55s ease-out, transform .55s ease-out"; });
+        ["ns-g-jong","ns-g-pyo"].forEach(id => { const ln = sec.querySelector("#"+id); if (ln) { const len = ln.getTotalLength(); ln.style.strokeDasharray = String(len); ln.style.strokeDashoffset = String(len); } });
+        sec.querySelectorAll("[data-count]").forEach(el => { const s = el.dataset.suffix||""; el.textContent = (el.dataset.countFrom!==undefined?el.dataset.countFrom:0)+s; });
+      } else { sec._dash = true; }
     });
 
     const runCount = (el) => {
@@ -700,27 +763,23 @@ class Component extends DCLogic {
         const arrow = speedEl.querySelector(".ns-speed-arrow");
         if (arrow) setTimeout(() => { arrow.style.opacity = "1"; }, 160);
       }
-      // S6 영역별 바 + 링
-      root.querySelectorAll("[data-screen-label='S6 영역별 채점']").forEach(sec => {
-        if (sec._bars || !inView(sec, 0.25)) return;
-        sec._bars = true;
-        sec.querySelectorAll(".ns-bar").forEach(b => { b.style.width = b.dataset.w + "%"; });
-        const ring = sec.querySelector("#ns-ring");
-        if (ring) { ring.style.transition = "stroke-dashoffset 1.2s ease-out"; ring.style.strokeDashoffset = String(390 * (1 - 0.74)); }
-      });
-      // S7 성장 라인
-      root.querySelectorAll("[data-screen-label='S7 성장 리포트']").forEach(sec => {
-        if (sec._line || !inView(sec, 0.25)) return;
-        sec._line = true;
-        const avg = document.getElementById("ns-line-avg");
-        if (avg) avg.style.strokeDasharray = "6 6";
-        const me = document.getElementById("ns-line-me");
-        if (me) {
-          const len = me.getTotalLength();
-          me.style.strokeDasharray = String(len);
-          me.style.strokeDashoffset = String(len);
-          requestAnimationFrame(() => { me.style.transition = "stroke-dashoffset 1.6s ease-out"; me.style.strokeDashoffset = "0"; });
-        }
+      // S6 통합 대시보드: 링/바/첨삭/라인/말풍선 채움 애니메이션
+      root.querySelectorAll("[data-screen-label='S6 성과 대시보드']").forEach(sec => {
+        if (sec._dash || !inView(sec, 0.18)) return;
+        sec._dash = true;
+        const ring = sec.querySelector("#ns-dash-ring");
+        if (ring) requestAnimationFrame(() => { ring.style.transition = "stroke-dashoffset 1.3s ease-out"; ring.style.strokeDashoffset = "117"; });
+        sec.querySelectorAll(".ns-dash-bar").forEach(b => requestAnimationFrame(() => { b.style.transition = "width 1.1s ease-out"; b.style.width = b.dataset.w + "%"; }));
+        sec.querySelectorAll(".ns-fix-row").forEach((r, i) => setTimeout(() => { r.style.opacity = "1"; r.style.transform = "none"; }, 140 + i * 130));
+        ["ns-g-jong", "ns-g-pyo"].forEach((id, i) => {
+          const ln = sec.querySelector("#" + id);
+          if (!ln) return;
+          const len = ln.getTotalLength();
+          ln.style.strokeDasharray = String(len);
+          ln.style.strokeDashoffset = String(len);
+          requestAnimationFrame(() => { ln.style.transition = "stroke-dashoffset 1.6s ease-out " + (i * 0.18) + "s"; ln.style.strokeDashoffset = "0"; });
+        });
+        sec.querySelectorAll(".ns-bubble").forEach((b, i) => setTimeout(() => { b.style.opacity = "1"; b.style.transform = "translateY(0)"; }, 220 + i * 260));
       });
       if (this._ensureFlow) { this._ensureFlow(); this._drawFlow(); }
     };
