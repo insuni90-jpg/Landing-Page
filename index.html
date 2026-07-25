@@ -22,6 +22,9 @@
   @keyframes ns-spin { to { transform: rotate(360deg); } }
   @keyframes ns-pulse { 0%,100% { opacity: .5; } 50% { opacity: 1; } }
   @keyframes ns-sheen { from { transform: translateX(-100%); } to { transform: translateX(860px); } }
+  @keyframes ns-sway { from { transform: rotate(-1.6deg); } to { transform: rotate(2deg); } }
+  @keyframes ns-sway-b { from { transform: rotate(1.8deg); } to { transform: rotate(-1.4deg); } }
+  @keyframes ns-leaf-drift { 0% { transform: translate(0,0) rotate(0deg); opacity:0; } 12% { opacity:.7; } 88% { opacity:.6; } 100% { transform: translate(-90px,150px) rotate(64deg); opacity:0; } }
   @media (max-width: 860px) {
     .ns-col2 { grid-template-columns: 1fr !important; gap: 40px !important; }
     .ns-col4 { grid-template-columns: repeat(2,1fr) !important; row-gap: 32px !important; }
@@ -53,8 +56,31 @@
 
   <!-- S1 HERO -->
   <section data-screen-label="S1 Hero" style="position:relative; background:#FFFFFF; overflow:hidden;">
-    <div style="position:absolute; top:-60px; right:-40px; width:320px; height:320px; border-radius:50%; background:#CBF6C3; opacity:.35; filter:blur(4px);"></div>
-    <div style="position:absolute; bottom:40px; left:-60px; width:200px; height:200px; border-radius:50%; background:#94EF90; opacity:.18;"></div>
+    <div style="position:absolute; inset:0; opacity:.5; background-image:linear-gradient(#00661A 1px, transparent 1px), linear-gradient(90deg, #00661A 1px, transparent 1px); background-size:38px 38px; -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 40%, rgba(0,0,0,.10), transparent 72%); mask-image:radial-gradient(ellipse 80% 70% at 50% 40%, rgba(0,0,0,.10), transparent 72%); pointer-events:none;"></div>
+    <div style="position:absolute; top:-60px; right:-40px; width:320px; height:320px; border-radius:50%; background:#CBF6C3; opacity:.28; filter:blur(4px);"></div>
+    <div style="position:absolute; top:-14px; right:-30px; transform-origin:100% 0; animation:ns-sway 9s ease-in-out infinite alternate;">
+      <svg width="300" height="240" viewBox="0 0 300 240" fill="none">
+        <path d="M298 4 C 250 52, 200 104, 138 178" stroke="#7FBF8E" stroke-width="3" stroke-linecap="round" opacity=".55"></path>
+        <path d="M262 42 C 226 58, 208 54, 196 42 C 214 24 244 26 262 42 Z" fill="#54D15B" opacity=".8"></path>
+        <path d="M238 74 C 268 62, 286 68, 294 84 C 272 100 246 92 238 74 Z" fill="#94EF90" opacity=".85"></path>
+        <path d="M212 100 C 178 114, 160 110, 150 96 C 170 78 200 82 212 100 Z" fill="#2F9E4F" opacity=".65"></path>
+        <path d="M190 130 C 220 120, 238 126, 246 142 C 224 158 198 148 190 130 Z" fill="#54D15B" opacity=".55"></path>
+        <path d="M162 160 C 130 172, 112 168, 104 154 C 122 138 150 142 162 160 Z" fill="#94EF90" opacity=".6"></path>
+        <path d="M146 182 C 170 176, 186 182, 192 196 C 174 208 152 198 146 182 Z" fill="#00661A" opacity=".28"></path>
+      </svg>
+    </div>
+    <div style="position:absolute; bottom:-20px; left:-36px; transform-origin:0 100%; animation:ns-sway-b 11s ease-in-out infinite alternate;">
+      <svg width="250" height="210" viewBox="0 0 250 210" fill="none">
+        <path d="M4 206 C 50 160, 96 116, 150 62" stroke="#7FBF8E" stroke-width="3" stroke-linecap="round" opacity=".5"></path>
+        <path d="M42 168 C 74 156, 92 162, 100 178 C 78 194 52 186 42 168 Z" fill="#94EF90" opacity=".7"></path>
+        <path d="M70 138 C 40 148, 22 144, 14 130 C 32 112 60 118 70 138 Z" fill="#54D15B" opacity=".6"></path>
+        <path d="M104 106 C 134 96, 152 102, 160 118 C 138 134 112 124 104 106 Z" fill="#2F9E4F" opacity=".5"></path>
+        <path d="M130 78 C 102 88, 84 84, 76 70 C 94 52 122 58 130 78 Z" fill="#94EF90" opacity=".55"></path>
+      </svg>
+    </div>
+    <div style="position:absolute; top:120px; right:340px; animation:ns-leaf-drift 14s ease-in-out infinite;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 14 C 8 4 18 2 22 4 C 20 14 10 20 4 14 Z" fill="#94EF90" opacity=".8"></path></svg>
+    </div>
     <div style="position:relative; max-width:1200px; margin:0 auto; padding:100px 24px; display:grid; grid-template-columns:7fr 5fr; gap:64px; align-items:center;" class="ns-col2">
       <div data-reveal="" style="position: relative">
         <span style="display:inline-block; background:#E8F5EC; color:#00661A; font-size:14px; font-weight:600; padding:8px 14px; border-radius:999px; margin-bottom:24px;">2027학년도 논술 대비 · 전 기능 무료</span>
@@ -116,47 +142,6 @@
   </section>
 
   <!-- S3 채점 속도 · 타임라인 바 -->
-  <section data-screen-label="S3 채점 속도" style="background:#FFFFFF;">
-    <div data-reveal="" style="max-width:1200px; margin:0 auto; padding:150px 24px;">
-      <div style="text-align:center; margin-bottom:20px;">
-        <span style="display:inline-block; background:#E8F5EC; color:#00661A; font-size:14px; font-weight:600; padding:7px 14px; border-radius:999px; margin-bottom:20px;">실시간 채점</span>
-        <h2 style="font-size:32px; font-weight:700; letter-spacing:-1px; margin:0 0 16px;">며칠을 기다리던 채점,<br><span style="color:#00661A;">이제 10분 안에 끝납니다</span></h2>
-        <p style="font-size:16px; line-height:1.6; color:#4B5563; margin:0;">사람이 하나하나 읽고 돌려주던 채점을, AI가 제출 직후 바로 시작합니다.</p>
-      </div>
-
-      <div style="max-width:860px; margin:56px auto 0; display:flex; flex-direction:column; gap:64px;">
-        <p style="text-align:center; font-size:14px; color:#6B7280; margin:0 0 4px;">같은 답안을 제출했을 때, <b style="color:#374151;">채점이 끝나기까지 걸리는 시간</b>을 비교했어요.</p>
-        <!-- 사람: 무한 대기 -->
-        <div style="opacity:.72;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-            <span style="display:inline-flex; align-items:center; gap:8px; font-size:15px; font-weight:700; color:#6B7280;"><span style="width:9px; height:9px; border-radius:50%; background:#9CA3AF;"></span>사람이 채점하면</span>
-            <span style="font-size:20px; font-weight:800; color:#9CA3AF; letter-spacing:-.5px;">며칠째 대기</span>
-          </div>
-          <div style="position:relative; height:42px; border-radius:12px; border:1px solid #E5E7EB; overflow:hidden; background:linear-gradient(100deg,#EDEFF2 30%,#F7F8FA 50%,#EDEFF2 70%); background-size:200% 100%; animation:ns-shimmer 2.2s linear infinite; display:flex; align-items:center; padding:0 16px;">
-            <span style="display:inline-flex; align-items:center; gap:9px; font-size:13px; font-weight:600; color:#8B95A1;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#AEB6BF" stroke-width="2.4" stroke-linecap="round" style="animation:ns-spin 1s linear infinite; flex:none;"><path d="M12 3a9 9 0 1 0 9 9"></path></svg>
-              <span id="ns-human-status" style="transition:opacity .5s ease;">채점자 찾는 중…</span>
-            </span>
-          </div>
-        </div>
-        <!-- AI: 완료 (강조) -->
-        <div style="position:relative; background:#F4F9F5; border:1.5px solid #BFE3CB; border-radius:20px; padding:26px 26px 28px; box-shadow:0 16px 40px rgba(0,102,26,.12);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-            <span style="display:inline-flex; align-items:center; gap:8px; font-size:15px; font-weight:800; color:#00661A;"><span style="width:9px; height:9px; border-radius:50%; background:#00661A;"></span>AI가 채점하면</span>
-            <span style="font-size:22px; font-weight:800; color:#00661A; letter-spacing:-.5px;">10분 내 완료</span>
-          </div>
-          <div style="position:relative; height:48px; border-radius:12px; background:#E3EEE6; overflow:hidden; box-shadow:inset 0 0 0 1px rgba(0,102,26,.08);">
-            <div class="ns-a-bar" style="position:relative; width:100%; height:100%; border-radius:12px; background:linear-gradient(90deg,#00661A,#54D15B); box-shadow:0 0 24px rgba(84,209,91,.5); display:flex; align-items:center; justify-content:flex-end; padding-right:18px; overflow:hidden; transition:width 2.6s cubic-bezier(.25,.8,.35,1);">
-              <div style="position:absolute; top:0; bottom:0; left:0; width:54px; background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.32),rgba(255,255,255,0)); animation:ns-sheen 3.2s linear infinite;"></div>
-              <span style="position:relative; display:inline-flex; align-items:center; gap:7px; font-size:14px; font-weight:800; color:#FFFFFF; white-space:nowrap;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" style="animation:ns-pulse 1.8s ease-in-out infinite;"><path d="M5 13l4 4L19 7"></path></svg>채점 완료</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- S4 문제 마퀴 -->
   <section data-screen-label="S4 마르지 않는 문제" style="background:#F4F6F8;">
     <div style="max-width:1200px; margin:0 auto; padding:100px 24px 40px;" data-reveal="">
       <div style="text-align:center; margin-bottom:12px;">
@@ -185,7 +170,48 @@
         </sc-for>
       </div>
     </div>
+  </section><section data-screen-label="S3 채점 속도" style="background:#FFFFFF;">
+    <div data-reveal="" style="max-width:1200px; margin:0 auto; padding:150px 24px;">
+      <div style="text-align:center; margin-bottom:20px;">
+        <span style="display:inline-block; background:#E8F5EC; color:#00661A; font-size:14px; font-weight:600; padding:7px 14px; border-radius:999px; margin-bottom:20px;">AI 실시간 채점</span>
+        <h2 style="font-size:32px; font-weight:700; letter-spacing:-1px; margin:0 0 16px;">며칠을 기다리던 채점,<br><span style="color:#00661A;">이제 10분 안에 끝납니다</span></h2>
+        <p style="font-size:16px; line-height:1.6; color:#4B5563; margin:0;">사람이 하나하나 읽고 돌려주던 채점을, 논술 평가 AI가 제출 직후 바로 시작합니다.</p>
+      </div>
+
+      <div style="max-width:860px; margin:56px auto 0; display:flex; flex-direction:column; gap:64px;">
+        
+        <!-- 사람: 무한 대기 -->
+        <div style="opacity:.72;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <span style="display:inline-flex; align-items:center; gap:8px; font-size:15px; font-weight:700; color:#6B7280;"><span style="width:9px; height:9px; border-radius:50%; background:#9CA3AF;"></span>사람이 채점하면</span>
+            <span style="font-size:20px; font-weight:800; color:#9CA3AF; letter-spacing:-.5px;">며칠째 대기</span>
+          </div>
+          <div style="position:relative; height:42px; border-radius:12px; border:1px solid #E5E7EB; overflow:hidden; background:linear-gradient(100deg,#EDEFF2 30%,#F7F8FA 50%,#EDEFF2 70%); background-size:200% 100%; animation:ns-shimmer 2.2s linear infinite; display:flex; align-items:center; padding:0 16px;">
+            <span style="display:inline-flex; align-items:center; gap:9px; font-size:13px; font-weight:600; color:#8B95A1;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#AEB6BF" stroke-width="2.4" stroke-linecap="round" style="animation:ns-spin 1s linear infinite; flex:none;"><path d="M12 3a9 9 0 1 0 9 9"></path></svg>
+              <span id="ns-human-status" style="transition:opacity .5s ease;">채점자 찾는 중…</span>
+            </span>
+          </div>
+        </div>
+        <!-- AI: 완료 (강조) -->
+        <div style="position:relative; width:110%; margin-left:-5%; background:#F4F9F5; border:1.5px solid #BFE3CB; border-radius:20px; padding:26px 26px 28px; box-shadow:0 16px 40px rgba(0,102,26,.12);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <span style="display:inline-flex; align-items:center; gap:8px; font-size:15px; font-weight:800; color:#00661A;"><span style="width:9px; height:9px; border-radius:50%; background:#00661A;"></span>논숲 AI가 채점하면</span>
+            <span style="font-size:22px; font-weight:800; color:#00661A; letter-spacing:-.5px;">10분 내 완료</span>
+          </div>
+          <div style="position:relative; height:48px; border-radius:12px; background:#E3EEE6; overflow:hidden; box-shadow:inset 0 0 0 1px rgba(0,102,26,.08);">
+            <div class="ns-a-bar" style="position:relative; width:100%; height:100%; border-radius:12px; background:linear-gradient(90deg,#00661A,#54D15B); box-shadow:0 0 24px rgba(84,209,91,.5); display:flex; align-items:center; justify-content:flex-end; padding-right:18px; overflow:hidden; transition:width 2.6s cubic-bezier(.25,.8,.35,1);">
+              <div style="position:absolute; top:0; bottom:0; left:0; width:54px; background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.32),rgba(255,255,255,0)); animation:ns-sheen 3.2s linear infinite;"></div>
+              <span style="position:relative; display:inline-flex; align-items:center; gap:7px; font-size:14px; font-weight:800; color:#FFFFFF; white-space:nowrap;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" style="animation:ns-pulse 1.8s ease-in-out infinite;"><path d="M5 13l4 4L19 7"></path></svg>채점 완료</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <!-- S4 문제 마퀴 -->
+  
 
   <!-- S4-B 제공 문제 -->
   <section data-screen-label="S4-B 제공 문제" style="background:#F4F9F5;">
@@ -248,7 +274,7 @@
   <section data-screen-label="S5 검수" style="background:#FFFFFF;">
     <div data-reveal="" style="max-width:1200px; margin:0 auto; padding:120px 24px; display:grid; grid-template-columns:5fr 7fr; gap:64px; align-items:center;" class="ns-col2">
       <div>
-        <span style="display:inline-block; background:#E8F5EC; color:#00661A; font-size:14px; font-weight:600; padding:7px 14px; border-radius:999px; margin-bottom:20px;">사람 검수</span>
+        <span style="display:inline-block; background:#E8F5EC; color:#00661A; font-size:14px; font-weight:600; padding:7px 14px; border-radius:999px; margin-bottom:20px;">전문가 검수</span>
         <h2 style="font-size:32px; font-weight:700; letter-spacing:-1px; margin:0 0 16px;">AI가 만들고,<br><span style="color:#00661A;">사람이 확인합니다</span></h2>
         <p style="font-size:16px; line-height:1.7; color:#4B5563; margin:0;">AI가 만든 기출변형 문제도, 사람 검수자의 승인을 거친 뒤에야 시험으로 등록됩니다. 이상한 문제를 풀며 시간을 낭비하지 않도록.</p>
       </div>
@@ -533,13 +559,13 @@
   </section>
 
   <!-- S8 캘린더 -->
-  <section data-screen-label="S8 논술 캘린더" id="s8" style="background:#F1F7F2;">
+  <section data-screen-label="S8 논술 캘린더" id="s8" style="background:#FFFFFF;">
     <div data-reveal="" style="max-width:1200px; margin:0 auto; padding:120px 24px; display:grid; grid-template-columns:5fr 7fr; gap:64px; align-items:center;" class="ns-col2">
       <div>
         <span style="display:inline-block; background:#E8F5EC; color:#00661A; font-size:14px; font-weight:600; padding:7px 14px; border-radius:999px; margin-bottom:20px;">일정 관리</span>
         <h2 style="font-size:32px; font-weight:700; letter-spacing:-1px; margin:0 0 16px;">원서 접수일, 시험일.<br>놓치지 마세요</h2>
         <p style="font-size:16px; line-height:1.7; color:#4B5563; margin:0 0 28px;">대학별 논술 일정을 한 화면에서 확인하고, <br>관심 대학의 논술 시험을 접수하고 응시하세요!</p>
-        <a href="#s8" style="display:inline-flex; align-items:center; background:#FFFFFF; color:#00661A; font-size:16px; font-weight:600; padding:15px 24px; border-radius:8px; border:1.5px solid #94EF90; text-decoration:none; transition:transform .2s ease, box-shadow .2s ease;" style-hover="transform:translateY(-2px); box-shadow:0 12px 26px rgba(17,24,39,.16);">논술 캘린더 보기</a>
+        <a href="#s8" style="display:inline-flex; align-items:center; background:#00661A; color:#FFFFFF; font-size:16px; font-weight:600; padding:16px 26px; border-radius:8px; text-decoration:none; transition:transform .2s ease, box-shadow .2s ease;" style-hover="transform:translateY(-2px); box-shadow:0 12px 26px rgba(0,102,26,.24); color:#FFFFFF;">대학별 논술 살펴보기</a>
       </div>
       <div style="position:relative; padding-top:18px;">
         <div style="position:absolute; top:34px; left:16px; right:-16px; bottom:-16px; background:#FFFFFF; border:1px solid #E5E7EB; border-radius:16px; box-shadow:0 4px 12px rgba(17,24,39,.06);"><span style="position:absolute; top:14px; right:20px; font-size:13px; font-weight:700; color:#C7CDD4;">1월</span></div>
@@ -580,19 +606,35 @@
       </div>
       </div>
       </div>
-    </div>
+    
   </section>
 
   <!-- S9 완두콩 -->
-  <section data-screen-label="S9 오픈 기념" style="position: relative; overflow: hidden; background-color: #EAF7EC">
-    <div style="position:absolute; top:-80px; right:-60px; width:320px; height:320px; border-radius:50%; background:#94EF90; opacity:.35;"></div>
-    <div style="position:absolute; bottom:-110px; left:-70px; width:300px; height:300px; border-radius:50%; background:#54D15B; opacity:.22;"></div>
+  <section data-screen-label="S9 오픈 기념" style="position: relative; overflow: hidden; background:linear-gradient(165deg,#EEF8F0 0%,#DCEFE1 55%,#CDE9D5 100%); border-top:1px solid #DCEEE2">
+    <div style="position:absolute; top:-24px; right:-20px; opacity:.5;">
+      <svg width="220" height="180" viewBox="0 0 300 240" fill="none">
+        <path d="M298 4 C 250 52, 200 104, 138 178" stroke="#7FBF8E" stroke-width="3" stroke-linecap="round" opacity=".55"></path>
+        <path d="M262 42 C 226 58, 208 54, 196 42 C 214 24 244 26 262 42 Z" fill="#54D15B" opacity=".8"></path>
+        <path d="M238 74 C 268 62, 286 68, 294 84 C 272 100 246 92 238 74 Z" fill="#94EF90" opacity=".85"></path>
+        <path d="M212 100 C 178 114, 160 110, 150 96 C 170 78 200 82 212 100 Z" fill="#2F9E4F" opacity=".65"></path>
+        <path d="M162 160 C 130 172, 112 168, 104 154 C 122 138 150 142 162 160 Z" fill="#94EF90" opacity=".6"></path>
+      </svg>
+    </div>
+    <div style="position:absolute; bottom:-30px; left:-26px; opacity:.45; transform:scaleX(-1);">
+      <svg width="200" height="170" viewBox="0 0 250 210" fill="none">
+        <path d="M4 206 C 50 160, 96 116, 150 62" stroke="#7FBF8E" stroke-width="3" stroke-linecap="round" opacity=".5"></path>
+        <path d="M42 168 C 74 156, 92 162, 100 178 C 78 194 52 186 42 168 Z" fill="#94EF90" opacity=".7"></path>
+        <path d="M70 138 C 40 148, 22 144, 14 130 C 32 112 60 118 70 138 Z" fill="#54D15B" opacity=".6"></path>
+        <path d="M104 106 C 134 96, 152 102, 160 118 C 138 134 112 124 104 106 Z" fill="#2F9E4F" opacity=".5"></path>
+      </svg>
+    </div>
     <div data-reveal="" style="position:relative; max-width:820px; margin:0 auto; padding:150px 24px; text-align:center;">
       <span style="display:inline-block; background:#00661A; color:#CBF6C3; font-size:14px; font-weight:700; letter-spacing:.5px; padding:8px 18px; border-radius:999px; margin-bottom:28px;">오픈 기념</span>
       <h2 style="font-size:52px; font-weight:800; letter-spacing:-2px; line-height:1.2; margin:0 0 22px; color:#00311E;">모든 시험, 모든 채점,<br>지금은 결제 없이</h2>
-      <p style="font-size:18px; line-height:1.6; color:#00581E; margin:0 0 44px;">네이버 로그인 한 번이면 바로 시작할 수 있습니다.</p>
-      <a href="#" style="display: flex; align-items: center; gap: 14px; width: 300px; max-width: 100%; margin: 0 auto; color: #FFFFFF; font-size: 17px; font-weight: 700; padding: 18px 24px; border-radius: 8px; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; height: 60px; justify-content: center; background-color: #03A94D" style-hover="transform:translateY(-2px); box-shadow:0 12px 26px rgba(3,199,90,.34);">
-        <div style="box-sizing: border-box; display: flex; flex-direction: row; gap: 5px; align-items: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" style="flex:none;"><path d="M4 4h5.2l5.4 8V4H20v16h-5.2L9.4 12v8H4V4z" fill="#FFFFFF"></path></svg><span style="flex:1; text-align:center;">네이버 로그인</span></div>
+      <p style="font-size:18px; line-height:1.6; color:#00581E; margin:0 0 36px;">네이버 로그인 한 번이면 바로 시작할 수 있습니다.</p>
+      
+      <a href="#" style="display: flex; align-items: center; gap: 14px; width: 300px; max-width: 100%; margin: 0 auto; color: #191F28; font-size: 17px; font-weight: 700; padding: 18px 24px; border-radius: 8px; border: 1px solid #E5E7EB; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; height: 60px; justify-content: center; background-color: #FFFFFF" style-hover="transform:translateY(-2px); box-shadow:0 12px 26px rgba(17,24,39,.16);">
+        <div style="box-sizing: border-box; display: flex; flex-direction: row; gap: 8px; align-items: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="flex:none;"><path d="M4 4h5.2l5.4 8V4H20v16h-5.2L9.4 12v8H4V4z" fill="#03C75A"></path></svg><span style="flex:1; text-align:center;">네이버 로그인</span></div>
         
       </a>
     </div>
@@ -626,11 +668,31 @@
   </section>
 
   <!-- S11 Final CTA -->
-  <section data-screen-label="S11 Final CTA" style="position:relative; background:#00311E; overflow:hidden;">
-    <svg viewBox="0 0 1440 200" preserveAspectRatio="none" style="position:absolute; bottom:0; left:0; width:100%; height:200px; opacity:.22;"><path d="M0,200 L0,140 Q120,90 240,120 T480,110 T720,90 T960,120 T1200,95 T1440,120 L1440,200 Z" fill="#54D15B"></path><path d="M0,200 L0,165 Q160,130 320,150 T640,140 T960,150 T1280,135 T1440,150 L1440,200 Z" fill="#28A33B"></path></svg>
-    <div data-reveal="" style="position:relative; max-width:1200px; margin:0 auto; padding:120px 24px; text-align:center;">
-      <h2 style="font-size:36px; font-weight:700; letter-spacing:-1px; color:#FFFFFF; margin:0 0 36px; line-height:1.35;">오늘 쓴 답안이,<br>이번 논술의 기준이 됩니다</h2>
-      <a href="/대학입시" style="display:inline-flex; align-items:center; background:#FFFFFF; color:#00661A; font-size:17px; font-weight:700; padding:18px 32px; border-radius:8px; text-decoration:none; transition:transform .2s ease, box-shadow .2s ease;" style-hover="transform:translateY(-2px); box-shadow:0 12px 26px rgba(0,0,0,.3); color:#00661A;">대학별 논술 시험 둘러보기</a>
+  <section data-screen-label="S11 Final CTA" style="position: relative; overflow: hidden; background: #FFFFFF; display: none">
+    <div style="position:absolute; inset:0; opacity:.5; background-image:linear-gradient(#00661A 1px, transparent 1px), linear-gradient(90deg, #00661A 1px, transparent 1px); background-size:38px 38px; -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 40%, rgba(0,0,0,.10), transparent 72%); mask-image:radial-gradient(ellipse 80% 70% at 50% 40%, rgba(0,0,0,.10), transparent 72%); pointer-events:none;"></div>
+    <div style="position:absolute; top:-30px; right:-24px; opacity:.55;">
+      <svg width="260" height="210" viewBox="0 0 300 240" fill="none">
+        <path d="M298 4 C 250 52, 200 104, 138 178" stroke="#7FBF8E" stroke-width="3" stroke-linecap="round" opacity=".55"></path>
+        <path d="M262 42 C 226 58, 208 54, 196 42 C 214 24 244 26 262 42 Z" fill="#54D15B" opacity=".8"></path>
+        <path d="M238 74 C 268 62, 286 68, 294 84 C 272 100 246 92 238 74 Z" fill="#94EF90" opacity=".85"></path>
+        <path d="M212 100 C 178 114, 160 110, 150 96 C 170 78 200 82 212 100 Z" fill="#2F9E4F" opacity=".65"></path>
+        <path d="M162 160 C 130 172, 112 168, 104 154 C 122 138 150 142 162 160 Z" fill="#94EF90" opacity=".6"></path>
+      </svg>
+    </div>
+    <div style="position:absolute; bottom:-34px; left:-30px; opacity:.5; transform:scaleX(-1);">
+      <svg width="230" height="190" viewBox="0 0 250 210" fill="none">
+        <path d="M4 206 C 50 160, 96 116, 150 62" stroke="#7FBF8E" stroke-width="3" stroke-linecap="round" opacity=".5"></path>
+        <path d="M42 168 C 74 156, 92 162, 100 178 C 78 194 52 186 42 168 Z" fill="#94EF90" opacity=".7"></path>
+        <path d="M70 138 C 40 148, 22 144, 14 130 C 32 112 60 118 70 138 Z" fill="#54D15B" opacity=".6"></path>
+        <path d="M104 106 C 134 96, 152 102, 160 118 C 138 134 112 124 104 106 Z" fill="#2F9E4F" opacity=".5"></path>
+      </svg>
+    </div>
+    <div data-reveal="" style="position:relative; max-width:1200px; margin:0 auto; padding:130px 24px; text-align:center;">
+      <h2 style="font-size:40px; font-weight:800; letter-spacing:-1.5px; color:#00311E; margin:0 0 40px; line-height:1.3;">논숲과 함께,<br><span style="color:#00661A;">논술 실력을 키워보세요</span></h2>
+      <div style="display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap;">
+        <a href="/대학입시" style="display:inline-flex; align-items:center; background:#00661A; color:#FFFFFF; font-size:16px; font-weight:600; padding:16px 26px; border-radius:8px; text-decoration:none; transition:transform .2s ease, box-shadow .2s ease;" style-hover="transform:translateY(-2px); box-shadow:0 12px 26px rgba(0,102,26,.24); color:#FFFFFF;">대학별 논술 살펴보기</a>
+        <a href="#s8" style="display:inline-flex; align-items:center; gap:12px; background:#FFFFFF; color:#191F28; font-size:16px; font-weight:700; padding:16px 26px; border-radius:8px; border:1px solid #E5E7EB; text-decoration:none; transition:transform .2s ease, box-shadow .2s ease;" style-hover="transform:translateY(-2px); box-shadow:0 12px 26px rgba(17,24,39,.16);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex:none;"><path d="M4 4h5.2l5.4 8V4H20v16h-5.2L9.4 12v8H4V4z" fill="#03C75A"></path></svg>네이버 로그인</a>
+      </div>
     </div>
   </section>
 
@@ -814,13 +876,13 @@ class Component extends DCLogic {
       // 섹션/요소 등장
       root.querySelectorAll("[data-reveal]").forEach(el => {
         if (el._revealed) return;
-        if (inView(el, 0.12)) { el._revealed = true; el.style.opacity = "1"; el.style.transform = "none"; }
+        if (inView(el, 0.28)) { el._revealed = true; el.style.opacity = "1"; el.style.transform = "none"; }
       });
       // 숫자 카운트업
-      root.querySelectorAll("[data-count]").forEach(el => { if (inView(el, 0.3)) runCount(el); });
+      root.querySelectorAll("[data-count]").forEach(el => { if (inView(el, 0.45)) runCount(el); });
       // 채점 속도 비교 카드
       const speedEl = document.getElementById("ns-speed");
-      if (speedEl && !speedEl._done && inView(speedEl, 0.2)) {
+      if (speedEl && !speedEl._done && inView(speedEl, 0.4)) {
         speedEl._done = true;
         speedEl.querySelectorAll(".ns-speed-card").forEach(c => {
           const delay = Number(c.dataset.delay) || 0;
@@ -831,14 +893,14 @@ class Component extends DCLogic {
       }
       // S3 타임라인 바: AI 바 0→100% 채움
       root.querySelectorAll("[data-screen-label='S3 채점 속도']").forEach(sec => {
-        if (sec._a || !inView(sec, 0.3)) return;
+        if (sec._a || !inView(sec, 0.45)) return;
         sec._a = true;
         const bar = sec.querySelector(".ns-a-bar");
         if (bar) { bar.style.width = "0%"; requestAnimationFrame(() => { bar.style.width = "100%"; }); }
       });
       // S6 통합 대시보드: 링/바/첨삭/라인/말풍선 채움 애니메이션
       root.querySelectorAll("[data-screen-label='S6 성과 대시보드']").forEach(sec => {
-        if (sec._dash || !inView(sec, 0.18)) return;
+        if (sec._dash || !inView(sec, 0.34)) return;
         sec._dash = true;
         const ring = sec.querySelector("#ns-dash-ring");
         if (ring) requestAnimationFrame(() => { ring.style.transition = "stroke-dashoffset 1.3s ease-out"; ring.style.strokeDashoffset = "117"; });
