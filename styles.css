@@ -1,0 +1,24 @@
+/* Design System — global styles */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+
+/* Figma design tokens (colors, spacing, radius, etc.) — all theme modes */
+@import "./components/fig-tokens.css";
+/* Text styles (empty — this file defines no formal Figma text styles) */
+@import "./components/fig-typography.css";
+
+:root {
+  --font-sans: "Pretendard", "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: rgb(17, 24, 39);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: rgb(42, 86, 219); text-decoration: none; }
+a:hover { color: rgb(25, 56, 149); text-decoration: underline; }
