@@ -38,14 +38,15 @@
 
   <header id="ns-gnb" style="position:sticky; top:0; z-index:100; background:#FFFFFF; transition:box-shadow .25s ease;">
     <div style="max-width:1200px; margin:0 auto; padding:0 24px; height:72px; display:flex; align-items:center; justify-content:space-between;">
-      <div style="display:flex; align-items:center; gap:8px;">
-        <div style="width:26px; height:26px; border-radius:50% 50% 50% 4px; background:#00661A;"></div>
-        <span style="font-size:22px; font-weight:700; color:#00661A; letter-spacing:-.5px;">논숲</span>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <div style="width:38px; height:38px; border-radius:11px; background:#00661A; display:flex; align-items:center; justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 4L2 8.5l10 4.5 8-3.6V15" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6 11v4c0 1.4 2.7 2.6 6 2.6s6-1.2 6-2.6v-4" stroke="#94EF90" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <span style="font-size:22px; font-weight:800; color:#00661A; letter-spacing:-.5px;">논숲</span>
       </div>
       <nav style="display:flex; align-items:center; gap:36px;">
-        <a href="/대학입시" style="font-size:16px; font-weight:500; color:#374151;">대학입시</a>
-        <a href="#s8" style="font-size:16px; font-weight:500; color:#374151;">논술 캘린더</a>
-        <a href="#s7" style="font-size:16px; font-weight:500; color:#374151;">성장 리포트</a>
+        <a href="/대학입시" style="font-size:16px; font-weight:600; color:#374151; text-decoration:none;">입시 논술</a>
+        <a href="#s8" style="font-size:16px; font-weight:600; color:#374151; text-decoration:none;">논술 일정</a>
+        <a href="#s10" style="font-size:16px; font-weight:600; color:#374151; text-decoration:none;">고객센터</a>
+        <a href="#s6" style="font-size:16px; font-weight:600; color:#374151; text-decoration:none;">성장 리포트</a>
       </nav>
       <div style="display:flex; align-items:center; gap:20px;">
         <a href="#" style="font-size:15px; font-weight:500; color:#4B5563;">로그인</a>
@@ -221,18 +222,14 @@
         <h2 style="font-size:32px; font-weight:700; letter-spacing:-1px; margin:0 0 16px; color:#111827;">하나의 출제 유형,<br><span style="color:#00661A;">두 가지 문제</span></h2>
         <p style="font-size:16px; line-height:1.6; color:#4B5563; margin:0;">같은 출제 유형에서 출발해, 두 갈래로 문제를 제공합니다.</p>
       </div>
-
       <div data-reveal="" style="display:grid; grid-template-columns:264px 96px 1fr; align-items:center; max-width:960px; margin:0 auto;" class="ns-branch">
-        <!-- 뿌리 노드 -->
-        <div style="background:linear-gradient(160deg,#F4F9F5,#E8F5EC); border:1px solid #DCEEE2; border-radius:20px; padding:28px 26px;">
-          <div style="font-size:12px; font-weight:700; color:#00661A; letter-spacing:.4px; margin-bottom:8px;">출제의 뿌리</div>
+        <div style="background: linear-gradient(160deg, #FFFFFF, #FFFFFF); border: 1px solid #DCEEE2; border-radius: 20px; padding: 28px 26px">
+          
           <div style="font-size:34px; font-weight:800; color:#00661A; letter-spacing:-1px; line-height:1;">최근 3개년</div>
-          <div style="font-size:16px; font-weight:700; color:#111827; margin-top:6px;">실제 출제 유형</div>
-          <div style="height:1px; background:#DCEEE2; margin:18px 0;"></div>
-          <div style="font-size:13px; line-height:1.6; color:#4B5563;">이 유형을 기준으로 두 가지 문제를 제공해요.</div>
+          <div style="font-size:16px; font-weight:700; color:#111827; margin-top:6px;">대학별 출제 유형 수집</div>
+          
+          
         </div>
-
-        <!-- 분기 커넥터 -->
         <svg width="96" height="220" viewBox="0 0 96 220" style="display:block; overflow:visible;">
           <defs><linearGradient id="ns-branch-grad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#94EF90"></stop><stop offset="1" stop-color="#00661A"></stop></linearGradient></defs>
           <path d="M0,110 C48,110 48,52 96,52" fill="none" stroke="#CBD2D9" stroke-width="2.5" stroke-linecap="round"></path>
@@ -241,10 +238,7 @@
           <circle cx="94" cy="52" r="3.5" fill="#CBD2D9"></circle>
           <circle cx="94" cy="168" r="3.5" fill="#00661A"></circle>
         </svg>
-
-        <!-- 두 갈래 -->
         <div style="display:flex; flex-direction:column; gap:22px;">
-          <!-- 기출 -->
           <div style="min-height:88px; display:flex; flex-direction:column; justify-content:center; background:#FAFBFC; border-left:4px solid #CBD2D9; border-radius:0 14px 14px 0; padding:18px 22px; transition:transform .2s ease, background .2s ease;" style-hover="transform:translateX(4px); background:#F3F5F7;">
             <div style="display:flex; align-items:center; gap:9px; margin-bottom:7px;">
               <span style="font-size:12px; font-weight:700; color:#374151; background:#EEF1F4; padding:4px 11px; border-radius:999px;">기출</span>
@@ -253,8 +247,7 @@
             <div style="font-size:18px; font-weight:700; color:#111827; letter-spacing:-.3px; margin-bottom:5px;">대학이 실제로 낸 문제</div>
             <p style="font-size:14px; line-height:1.6; color:#4B5563; margin:0;">대학이 실제로 출제했던 문제를 <b style="color:#111827;">원문 그대로</b> 제공합니다.</p>
           </div>
-          <!-- 기출변형 -->
-          <div id="ns-var-card" style="position:relative; min-height:88px; display:flex; flex-direction:column; justify-content:center; background:#F4F9F5; border-left:4px solid #00661A; border-radius:0 14px 14px 0; padding:18px 22px; transition:transform .2s ease, background .2s ease;" style-hover="transform:translateX(4px); background:#EAF5EC;">
+          <div id="ns-var-card" style="position: relative; min-height: 88px; display: flex; flex-direction: column; justify-content: center; border-left: 4px solid #00661A; border-radius: 0 14px 14px 0; padding: 18px 22px; transition: transform .2s ease, background .2s ease; background-color: #FFFFFF" style-hover="transform:translateX(4px); background:#EAF5EC;">
             <div style="display:flex; align-items:center; gap:9px; margin-bottom:7px;">
               <span style="font-size:12px; font-weight:700; color:#00661A; background:#CBF6C3; padding:4px 11px; border-radius:999px;">기출변형</span>
               <span style="display:inline-flex; align-items:center; gap:5px; font-size:11px; font-weight:700; color:#FFFFFF; background:#00661A; padding:4px 10px; border-radius:999px;">
@@ -330,7 +323,7 @@
   </section>
 
   <!-- S6 성과 대시보드 (통합 · 브라우저 목업) -->
-  <section data-screen-label="S6 성과 대시보드" style="background:#EBEEF2;">
+  <section data-screen-label="S6 성과 대시보드" id="s6" style="background:#EBEEF2;">
     <div data-reveal="" style="max-width:1200px; margin:0 auto; padding:110px 24px;">
       <div style="text-align:center; margin-bottom:44px;">
         <span style="display:inline-block; background:#E8F5EC; color:#00661A; font-size:14px; font-weight:600; padding:7px 14px; border-radius:999px; margin-bottom:20px;">성과 분석 · 추이</span>
@@ -559,7 +552,7 @@
   </section>
 
   <!-- S8 캘린더 -->
-  <section data-screen-label="S8 논술 캘린더" id="s8" style="background:#FFFFFF;">
+  <section data-screen-label="S8 논술 캘린더" id="s8" style="background-color: #F4F9F5">
     <div data-reveal="" style="max-width:1200px; margin:0 auto; padding:120px 24px; display:grid; grid-template-columns:5fr 7fr; gap:64px; align-items:center;" class="ns-col2">
       <div>
         <span style="display:inline-block; background:#E8F5EC; color:#00661A; font-size:14px; font-weight:600; padding:7px 14px; border-radius:999px; margin-bottom:20px;">일정 관리</span>
@@ -609,39 +602,8 @@
     
   </section>
 
-  <!-- S9 완두콩 -->
-  <section data-screen-label="S9 오픈 기념" style="position: relative; overflow: hidden; background:linear-gradient(165deg,#EEF8F0 0%,#DCEFE1 55%,#CDE9D5 100%); border-top:1px solid #DCEEE2">
-    <div style="position:absolute; top:-24px; right:-20px; opacity:.5;">
-      <svg width="220" height="180" viewBox="0 0 300 240" fill="none">
-        <path d="M298 4 C 250 52, 200 104, 138 178" stroke="#7FBF8E" stroke-width="3" stroke-linecap="round" opacity=".55"></path>
-        <path d="M262 42 C 226 58, 208 54, 196 42 C 214 24 244 26 262 42 Z" fill="#54D15B" opacity=".8"></path>
-        <path d="M238 74 C 268 62, 286 68, 294 84 C 272 100 246 92 238 74 Z" fill="#94EF90" opacity=".85"></path>
-        <path d="M212 100 C 178 114, 160 110, 150 96 C 170 78 200 82 212 100 Z" fill="#2F9E4F" opacity=".65"></path>
-        <path d="M162 160 C 130 172, 112 168, 104 154 C 122 138 150 142 162 160 Z" fill="#94EF90" opacity=".6"></path>
-      </svg>
-    </div>
-    <div style="position:absolute; bottom:-30px; left:-26px; opacity:.45; transform:scaleX(-1);">
-      <svg width="200" height="170" viewBox="0 0 250 210" fill="none">
-        <path d="M4 206 C 50 160, 96 116, 150 62" stroke="#7FBF8E" stroke-width="3" stroke-linecap="round" opacity=".5"></path>
-        <path d="M42 168 C 74 156, 92 162, 100 178 C 78 194 52 186 42 168 Z" fill="#94EF90" opacity=".7"></path>
-        <path d="M70 138 C 40 148, 22 144, 14 130 C 32 112 60 118 70 138 Z" fill="#54D15B" opacity=".6"></path>
-        <path d="M104 106 C 134 96, 152 102, 160 118 C 138 134 112 124 104 106 Z" fill="#2F9E4F" opacity=".5"></path>
-      </svg>
-    </div>
-    <div data-reveal="" style="position:relative; max-width:820px; margin:0 auto; padding:150px 24px; text-align:center;">
-      <span style="display:inline-block; background:#00661A; color:#CBF6C3; font-size:14px; font-weight:700; letter-spacing:.5px; padding:8px 18px; border-radius:999px; margin-bottom:28px;">오픈 기념</span>
-      <h2 style="font-size:52px; font-weight:800; letter-spacing:-2px; line-height:1.2; margin:0 0 22px; color:#00311E;">모든 시험, 모든 채점,<br>지금은 결제 없이</h2>
-      <p style="font-size:18px; line-height:1.6; color:#00581E; margin:0 0 36px;">네이버 로그인 한 번이면 바로 시작할 수 있습니다.</p>
-      
-      <a href="#" style="display: flex; align-items: center; gap: 14px; width: 300px; max-width: 100%; margin: 0 auto; color: #191F28; font-size: 17px; font-weight: 700; padding: 18px 24px; border-radius: 8px; border: 1px solid #E5E7EB; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; height: 60px; justify-content: center; background-color: #FFFFFF" style-hover="transform:translateY(-2px); box-shadow:0 12px 26px rgba(17,24,39,.16);">
-        <div style="box-sizing: border-box; display: flex; flex-direction: row; gap: 8px; align-items: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="flex:none;"><path d="M4 4h5.2l5.4 8V4H20v16h-5.2L9.4 12v8H4V4z" fill="#03C75A"></path></svg><span style="flex:1; text-align:center;">네이버 로그인</span></div>
-        
-      </a>
-    </div>
-  </section>
-
-  <!-- S10 FAQ -->
-  <section data-screen-label="S10 FAQ" style="background:#FFFFFF;">
+  <!-- S9 오픈 기념 (A안 · 딥 그린 스포트라이트) -->
+  <section data-screen-label="S10 FAQ" id="s10" style="background-color: #FFFFFF">
     <div data-reveal="" style="max-width:820px; margin:0 auto; padding:120px 24px;">
       <h2 style="font-size:32px; font-weight:700; letter-spacing:-1px; margin:0 0 40px; text-align:center;">자주 묻는 질문</h2>
       <div style="display:flex; flex-direction:column; gap:12px;">
@@ -652,8 +614,8 @@
                 <span style="flex:none; font-size:14px; font-weight:800; color:{{ faq.numColor }}; transition:color .3s ease; width:22px;">Q{{ faq.num }}</span>
                 <span>{{ faq.q }}</span>
               </span>
-              <span style="flex:none; width:30px; height:30px; border-radius:50%; background:{{ faq.iconBg }}; display:flex; align-items:center; justify-content:center; transition:background .3s ease, transform .35s cubic-bezier(.34,1.56,.64,1); transform:rotate({{ faq.iconRot }}deg);">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="{{ faq.iconStroke }}" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+              <span style="flex:none; width:30px; height:30px; display:flex; align-items:center; justify-content:center; transition:transform .35s cubic-bezier(.34,1.56,.64,1); transform:rotate({{ faq.iconRot }}deg);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{ faq.iconStroke }}" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
               </span>
             </button>
             <div style="display:grid; grid-template-rows:{{ faq.rows }}; transition:grid-template-rows .34s ease;">
@@ -665,7 +627,26 @@
         </sc-for>
       </div>
     </div>
+  </section><section data-screen-label="S9 오픈 기념 (A)" style="position: relative; overflow: hidden; background:#03260F;">
+    <div style="position:absolute; inset:0; background:radial-gradient(ellipse 60% 60% at 50% 22%, rgba(84,209,91,.30), transparent 62%);"></div>
+    <div style="position:absolute; inset:0; background:radial-gradient(ellipse 90% 70% at 50% 120%, rgba(0,102,26,.55), transparent 60%);"></div>
+    <div style="position:absolute; inset:0; opacity:.16; background-image:linear-gradient(#94EF90 1px, transparent 1px), linear-gradient(90deg, #94EF90 1px, transparent 1px); background-size:46px 46px; -webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%, rgba(0,0,0,.5), transparent 70%); mask-image:radial-gradient(ellipse 70% 60% at 50% 30%, rgba(0,0,0,.5), transparent 70%);"></div>
+    <div style="position:absolute; top:56px; left:50%; transform:translateX(-50%); width:520px; height:220px; background:radial-gradient(ellipse at 50% 0%, rgba(203,246,195,.35), transparent 70%); filter:blur(6px);"></div>
+    <div data-reveal="" style="position:relative; max-width:820px; margin:0 auto; padding:150px 24px; text-align:center;">
+      <span style="display:inline-block; background:rgba(148,239,144,.16); color:#94EF90; font-size:14px; font-weight:700; letter-spacing:.5px; padding:8px 18px; border-radius:999px; margin-bottom:28px; border:1px solid rgba(148,239,144,.28);">오픈 기념</span>
+      <h2 style="font-size:52px; font-weight:800; letter-spacing:-2px; line-height:1.2; margin:0 0 22px; color:#FFFFFF;">모든 시험, 모든 채점,<br><span style="color:#94EF90;">결제 없이 무료</span></h2>
+      <p style="font-size:18px; line-height:1.6; color:#B7D9BF; margin:0 0 36px;">네이버 로그인 한 번이면 바로 시작할 수 있습니다.</p>
+      <a href="#" style="display: flex; align-items: center; gap: 14px; width: 300px; max-width: 100%; margin: 0 auto; color: #191F28; font-size: 17px; font-weight: 700; padding: 18px 24px; border-radius: 8px; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; height: 60px; justify-content: center; background-color: #FFFFFF" style-hover="transform:translateY(-2px); box-shadow:0 16px 34px rgba(0,0,0,.4);">
+        <div style="box-sizing: border-box; display: flex; flex-direction: row; gap: 8px; align-items: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="flex:none;"><path d="M4 4h5.2l5.4 8V4H20v16h-5.2L9.4 12v8H4V4z" fill="#03C75A"></path></svg><span style="flex:1; text-align:center;">네이버 로그인</span></div>
+      </a>
+    </div>
   </section>
+
+  <!-- S9 오픈 기념 (D안 · 원고지 + 새싹) -->
+  
+
+  <!-- S10 FAQ -->
+  
 
   <!-- S11 Final CTA -->
   <section data-screen-label="S11 Final CTA" style="position: relative; overflow: hidden; background: #FFFFFF; display: none">
@@ -701,7 +682,7 @@
     <div style="max-width:1200px; margin:0 auto; padding:64px 24px;">
       <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:40px;">
         <div>
-          <div style="display:flex; align-items:center; gap:8px; margin-bottom:20px;"><div style="width:22px; height:22px; border-radius:50% 50% 50% 4px; background:#54D15B;"></div><span style="font-size:19px; font-weight:700; color:#FFFFFF;">논숲</span></div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;"><div style="width:34px; height:34px; border-radius:10px; background:#00661A; display:flex; align-items:center; justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 4L2 8.5l10 4.5 8-3.6V15" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6 11v4c0 1.4 2.7 2.6 6 2.6s6-1.2 6-2.6v-4" stroke="#94EF90" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><span style="font-size:19px; font-weight:800; color:#FFFFFF;">논숲</span></div>
           <div style="font-size:13px; line-height:1.9;">
             <div>주식회사 유플러스시스템 · 사업자등록번호 119-86-32775</div>
             <div>서울특별시 금천구 가산디지털1로 25, 1206호(가산동, 대륭테크노타운 17차)</div>
@@ -747,7 +728,7 @@ class Component extends DCLogic {
         answerOpacity: open ? "1" : "0",
         iconRot: open ? "135" : "0",
         iconBg: open ? "#00661A" : "#EAF3EC",
-        iconStroke: open ? "#FFFFFF" : "#00661A",
+        iconStroke: open ? "#00661A" : "#8B95A1",
         numColor: open ? "#00661A" : "#B0B8C1",
         borderColor: open ? "#BFE3CB" : "#E5E7EB",
         cardBg: open ? "#F7FBF8" : "#FFFFFF",
